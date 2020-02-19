@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment
 
 class SplashScreenFragment : Fragment(), View.OnTouchListener {
     private var mIsActive = true
-    private val mSplashTime = 500
+    private val mSplashTime = 2000
     private val mTimeIncrement = 100
     private val mSleepTime = 100
 
