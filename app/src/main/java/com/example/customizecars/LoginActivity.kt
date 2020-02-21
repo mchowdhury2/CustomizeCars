@@ -32,14 +32,16 @@ class LoginActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    /** Called when Main activity paused */
+    /** Called when Main activity paused
+     * show message to screen */
     override fun onPause() {
 
         super.onPause()
         Toast.makeText(applicationContext, "onPause called", Toast.LENGTH_LONG).show()
     }
 
-    /** Called when Main activity resumed */
+    /** Called when Main activity resumed
+     * show message to screen */
     override fun onResume(){
         super.onResume()
         Toast.makeText(applicationContext, "onResume called", Toast.LENGTH_LONG).show()
