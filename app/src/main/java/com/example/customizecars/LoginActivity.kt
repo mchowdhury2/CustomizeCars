@@ -5,6 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
+import androidx.core.app.ComponentActivity
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+
+
 
 
 const val EXTRA_USERNAME = "com.example.customizecars.USERNAME"
@@ -23,6 +30,19 @@ class LoginActivity : AppCompatActivity() {
             putExtra(EXTRA_USERNAME, username)
         }
         startActivity(intent)
+    }
+
+    /** Called when Main activity paused */
+    override fun onPause() {
+
+        super.onPause()
+        Toast.makeText(applicationContext, "onPause called", Toast.LENGTH_LONG).show()
+    }
+
+    /** Called when Main activity resumed */
+    override fun onResume(){
+        super.onResume()
+        Toast.makeText(applicationContext, "onResume called", Toast.LENGTH_LONG).show()
     }
 
 }

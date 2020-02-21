@@ -17,4 +17,5 @@ class DisplayUsernameActivity : AppCompatActivity() {
             text = username
         }
     }
+
 }
