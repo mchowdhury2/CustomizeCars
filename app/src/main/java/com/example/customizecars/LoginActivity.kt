@@ -6,15 +6,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-import androidx.core.app.ComponentActivity
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 
 
 
-
-const val EXTRA_USERNAME = "com.example.customizecars.USERNAME"
+//const val EXTRA_USERNAME = "com.example.customizecars.USERNAME"
 
 class LoginActivity : AppCompatActivity() {
 
@@ -22,12 +17,14 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
     }
+
+
     /** Called when the user taps the Login button */
     fun login(view: View) {
         val editText = findViewById<EditText>(R.id.editText)
         val username = editText.text.toString()
         val intent = Intent(this, DisplayUsernameActivity::class.java).apply {
-            putExtra(EXTRA_USERNAME, username)
+            putExtra("com.example.customizecars.USERNAME", username)
         }
         startActivity(intent)
     }
