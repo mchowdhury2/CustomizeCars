@@ -21,7 +21,7 @@ class AllDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, n
                 "${DBSchema.UsersTable.Cols.ADDRESS} TEXT," +
                 "${DBSchema.UsersTable.Cols.PHONE} TEXT," +
                 "${DBSchema.UsersTable.Cols.EMAIL} TEXT," +
-                "${DBSchema.UsersTable.Cols.USERACCTNO} INTEGER PRIMARY KEY)"
+                "${DBSchema.UsersTable.Cols.USERACCTNO} INTEGER )"
 
     private val SQL_DELETE_USER = "DROP TABLE IF EXISTS ${DBSchema.UsersTable.TABLENAME}"
 

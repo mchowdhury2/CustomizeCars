@@ -1,5 +1,6 @@
 package com.example.customizecars
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -13,8 +14,9 @@ class DisplayUsernameActivity : AppCompatActivity() {
         val username = intent.getStringExtra("com.example.customizecars.USERNAME")
         findViewById<TextView>(R.id.textView).apply {
             text = username
-           
+
         }
     }
+
 
 }
