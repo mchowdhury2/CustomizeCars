@@ -11,6 +11,7 @@
     <string name="login_failed">"Login failed"</string>
     <string name="edit_username">Enter username</string>
     <string name="button_login">Login</string>
+    <string name="button_signup">Signup</string>
     <string name="edit_password">Enter password</string>
 </resources>
 

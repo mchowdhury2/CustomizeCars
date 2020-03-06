@@ -15,6 +15,12 @@ class DisplayUsernameActivity : AppCompatActivity() {
             text = username
            
         }
+
+        val password = intent.getStringExtra("com.example.customizecars.PASSWORD")
+        findViewById<TextView>(R.id.textView4).apply {
+            text = password
+
+        }
     }
 
 }
