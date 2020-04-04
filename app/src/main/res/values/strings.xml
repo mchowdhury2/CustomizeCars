@@ -13,5 +13,6 @@
     <string name="button_login">Login</string>
     <string name="button_signup">Signup</string>
     <string name="edit_password">Enter password</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
 
