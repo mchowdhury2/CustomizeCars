@@ -6,20 +6,28 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+
 import com.example.customizecars.R
 import com.example.customizecars.model.AllDbHelper
 import com.example.customizecars.model.DBSchema
 
+import kotlinx.android.synthetic.main.activity_login.*
+
 
 //const val EXTRA_USERNAME = "com.example.customizecars.USERNAME"
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity(), View.OnClickListener {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        val buttontemp = findViewById<Button>(R.id.buttontemp)
+        buttontemp.setOnClickListener(this)
     }
 
     override fun onStart() {
@@ -100,9 +108,41 @@ class LoginActivity : AppCompatActivity() {
     fun login(view: View) {
         val editText = findViewById<EditText>(R.id.editText)
         val username = editText.text.toString()
+        val password = editText5.text.toString()
+
+        val dbHelper = AllDbHelper(this)
+        val db = dbHelper.readableDatabase
+        val sortOrder = "${DBSchema.AccountsTable.Cols.ACCTNO} DESC"
+
+        val cursor = db.query(
+            DBSchema.AccountsTable.TABLENAME,
+            null,
+            null,
+            null,
+            null,
+            null,
+            sortOrder
+        )
+
+        //cursor.moveToNext()
+        val acctno = cursor.getColumnIndex("acctnumber")
+
         val intent = Intent(this, DisplayUsernameActivity::class.java).apply {
+            putExtra("com.example.customizecars.USERNAME", acctno)
+        }
+        intent.putExtra("com.example.customizecars.PASSWORD", password)
+        startActivity(intent)
+    }
+
+    /** Called when the user taps the Signup button */
+    fun signup(view: View) {
+        val editText = findViewById<EditText>(R.id.editText)
+        val username = editText.text.toString()
+        val password = editText5.text.toString()
+        val intent = Intent(this, DBInsertActivity::class.java).apply {
             putExtra("com.example.customizecars.USERNAME", username)
         }
+        intent.putExtra("com.example.customizecars.PASSWORD", password)
         startActivity(intent)
     }
 
@@ -121,4 +161,13 @@ class LoginActivity : AppCompatActivity() {
         Toast.makeText(applicationContext, "onResume called", Toast.LENGTH_LONG).show()
     }
 
+
+    override fun onClick(view: View) {
+        when (view.getId()){
+            R.id.buttontemp -> {
+                startActivity(Intent(applicationContext, SelectyearActivity::class.java))
+            }
+
+        }
+    }
 }
