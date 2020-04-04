@@ -1,4 +1,4 @@
-package com.example.customizecars
+package com.example.customizecars.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.customizecars.R
 
 /**
  * Fragment for splash screen.

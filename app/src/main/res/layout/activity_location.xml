@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LocationActivity">
+
+    <TextView
+        android:id="@+id/textlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="PLEASE SELECT A LOCATION TO PICK UP ORDER."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textlocation">
+
+        <RadioButton
+            android:id="@+id/radioButtongford"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Germain Ford, 7250 Sawmill Rd, Columbus, OH 43235" />
+
+        <RadioButton
+            android:id="@+id/radioButtontwest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toyota West, 1500 Auto Mall Dr, Columbus, OH 43228" />
+
+        <RadioButton
+            android:id="@+id/radioButtonrhonda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Roush Honda, 100 W Schrock Rd, Westerville, OH 43081" />
+
+        <RadioButton
+            android:id="@+id/radioButtonlacura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lindsay Acura, 5880 Scarborough Blvd, Columbus, OH 43232" />
+
+        <RadioButton
+            android:id="@+id/radioButtonkbmw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kelly BMW, 4050 Morse Rd, Columbus, OH 43230" />
+
+        <RadioButton
+            android:id="@+id/radioButtonginf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gemain Infinity, 3833 Morse Rd, Columbus, OH 43219" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonlocationdone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="DONE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

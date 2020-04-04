@@ -1,4 +1,4 @@
-package com.example.customizecars
+package com.example.customizecars.ui
 
 import android.content.ContentValues
 import android.content.Intent
@@ -8,7 +8,9 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-
+import com.example.customizecars.R
+import com.example.customizecars.model.AllDbHelper
+import com.example.customizecars.model.DBSchema
 
 
 //const val EXTRA_USERNAME = "com.example.customizecars.USERNAME"
@@ -31,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Create a new map of values, where column names are the keys
         val values = ContentValues().apply {
-            put(DBSchema.UsersTable.Cols.USERACCTNO, 108)
+            put(DBSchema.UsersTable.Cols.USERACCTNO, 110)
             put(DBSchema.UsersTable.Cols.NAME, "Akhlak")
             put(DBSchema.UsersTable.Cols.ADDRESS, "Columbus,OH")
             put(DBSchema.UsersTable.Cols.EMAIL, "example.##@osu.edu")

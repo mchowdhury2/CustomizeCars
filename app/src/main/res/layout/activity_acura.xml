@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AcuraActivity">
+
+    <TextView
+        android:id="@+id/textacura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="PLEASE SELECT A MODEL OF ACURA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radiogroupacura"
+        android:layout_width="382dp"
+        android:layout_height="198dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textacura">
+
+        <RadioButton
+            android:id="@+id/radioButtontlx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TLX" />
+
+        <RadioButton
+            android:id="@+id/radioButtonilx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ILX" />
+
+        <RadioButton
+            android:id="@+id/radioButtonmdx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MDX" />
+
+        <RadioButton
+            android:id="@+id/radioButtonnsx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NSX" />
+
+        <RadioButton
+            android:id="@+id/radioButtonrdx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RDX" />
+
+        <RadioButton
+            android:id="@+id/radioButtonrlx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RLX" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttoninternal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="PLEASE CLICK TO SELECT INTERNAL FEATURES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroupacura" />
+
+    <Button
+        android:id="@+id/buttonexternal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="PLEAE CLICK TO SELECT EXTERNAL FEATURES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttoninternal" />
+
+    <Button
+        android:id="@+id/buttonlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="PLEASE SELECT A LOCATION."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonexternal" />
+
+    <Button
+        android:id="@+id/buttonreview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="REVIEW ORDER"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonlocation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

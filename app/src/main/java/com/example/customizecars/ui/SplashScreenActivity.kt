@@ -1,11 +1,12 @@
-package com.example.customizecars
+package com.example.customizecars.ui
 
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.customizecars.R
 
 
-    class SplashScreenActivity: SingleFragmentActivity() {
+class SplashScreenActivity: SingleFragmentActivity() {
 
         override fun createFragment(): Fragment {
         return SplashScreenFragment()

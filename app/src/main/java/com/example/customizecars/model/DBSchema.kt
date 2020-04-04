@@ -1,4 +1,4 @@
-package com.example.customizecars
+package com.example.customizecars.model
 
 
 class DBSchema {

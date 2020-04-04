@@ -1,4 +1,4 @@
-package com.example.customizecars
+package com.example.customizecars.ui
 
 
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
 
 import androidx.appcompat.app.AppCompatActivity
+import com.example.customizecars.R
 
 abstract class SingleFragmentActivity : AppCompatActivity() {
 

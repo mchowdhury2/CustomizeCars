@@ -1,4 +1,4 @@
-package com.example.customizecars
+package com.example.customizecars.model
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase

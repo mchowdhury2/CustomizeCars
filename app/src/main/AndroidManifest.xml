@@ -9,23 +9,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".ui.ReviewActivity"></activity>
+        <activity android:name=".ui.LocationActivity" />
+        <activity android:name=".ui.ExternalActivity" />
+        <activity android:name=".ui.InternalActivity" />
+        <activity android:name=".ui.InfinityActivity" />
+        <activity android:name=".ui.FordActivity" />
+        <activity android:name=".ui.ToyotaActivity" />
+        <activity android:name=".ui.HondaActivity" />
+        <activity android:name=".ui.BmwActivity" />
+        <activity android:name=".ui.AcuraActivity" />
+        <activity android:name=".ui.MakeActivity" />
+        <activity android:name=".ui.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity">
+        <activity android:name=".ui.SelectyearActivity">
+        </activity>
+        <activity android:name=".ui.LoginActivity">
             <intent-filter>
                 <action android:name="com.example.customizecars.Login" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".DisplayUsernameActivity" />
-        <activity android:name=".DatabaseActivity"></activity>
+        <activity android:name=".ui.DisplayUsernameActivity" />
+        <activity android:name=".ui.DatabaseActivity" />
     </application>
 
 </manifest>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.InfinityActivity">
+
+    <TextView
+        android:id="@+id/textinfinity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="PLEASE SELECT A MODEL OF INFINITY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <RadioGroup
+        android:id="@+id/radiogroupinfinity"
+        android:layout_width="382dp"
+        android:layout_height="198dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textinfinity">
+
+        <RadioButton
+            android:id="@+id/radioButtonq50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q50" />
+
+        <RadioButton
+            android:id="@+id/radioButtonq60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q60" />
+
+        <RadioButton
+            android:id="@+id/radioButtonqx50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QX50" />
+
+        <RadioButton
+            android:id="@+id/radioButtonqx60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QX60" />
+
+        <RadioButton
+            android:id="@+id/radioButtonq70"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q70" />
+
+        <RadioButton
+            android:id="@+id/radioButtonq70l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q70L" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttoninternal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="PLEASE CLICK TO SELECT INTERNAL FEATURES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroupinfinity" />
+
+    <Button
+        android:id="@+id/buttonexternal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="PLEAE CLICK TO SELECT EXTERNAL FEATURES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttoninternal" />
+
+    <Button
+        android:id="@+id/buttonlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="PLEASE SELECT A LOCATION."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonexternal" />
+
+    <Button
+        android:id="@+id/buttonreview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="REVIEW ORDER"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonlocation" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,8 @@
-package com.example.customizecars
+package com.example.customizecars.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.customizecars.R
 
 class DatabaseActivity : AppCompatActivity() {
 

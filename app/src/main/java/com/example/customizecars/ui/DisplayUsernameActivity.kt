@@ -1,9 +1,9 @@
-package com.example.customizecars
+package com.example.customizecars.ui
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.example.customizecars.R
 
 
 class DisplayUsernameActivity : AppCompatActivity() {

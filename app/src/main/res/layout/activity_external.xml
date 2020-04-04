@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ExternalActivity">
+
+    <TextView
+        android:id="@+id/textexternal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="PLEASE SELECT EXTERNAL FEATURES."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textextwheel"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Wheels"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textexternal" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textextwheel">
+
+        <RadioButton
+            android:id="@+id/radioButtonextret"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Retribution" />
+
+        <RadioButton
+            android:id="@+id/radioButtonextmr143"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" MR143 CS6"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radioButtonextpro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prophecy" />
+
+        <RadioButton
+            android:id="@+id/radioButtonextxm6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="XM-6"
+            app:layout_constraintStart_toStartOf="parent" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textextbumpers"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Bumpers"
+        app:layout_constraintStart_toEndOf="@+id/textextwheel"
+        app:layout_constraintTop_toBottomOf="@+id/textexternal" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/textextbumpers">
+
+        <RadioButton
+            android:id="@+id/radioButtonextstd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Standard" />
+
+        <RadioButton
+            android:id="@+id/radioButtonextdeep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deep Drop" />
+
+        <RadioButton
+            android:id="@+id/radioButtonexttube"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tube" />
+
+        <RadioButton
+            android:id="@+id/radioButtonextstep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textextengine"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Engine"
+        app:layout_constraintStart_toEndOf="@+id/textextbumpers"
+        app:layout_constraintTop_toBottomOf="@+id/textexternal" />
+
+    <RadioGroup
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup3"
+        app:layout_constraintTop_toBottomOf="@+id/textextengine" >
+
+        <RadioButton
+            android:id="@+id/radioButtonext2v6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2.0L V6" />
+
+        <RadioButton
+            android:id="@+id/radioButtonext25v6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2.5L V6" />
+
+        <RadioButton
+            android:id="@+id/radioButtonext3v6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3.0L V6" />
+
+        <RadioButton
+            android:id="@+id/radioButtonext3v8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3.0L V8"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonextdone"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="DONE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
