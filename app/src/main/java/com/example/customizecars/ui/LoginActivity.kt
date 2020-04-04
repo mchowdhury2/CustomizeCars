@@ -165,7 +165,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View) {
         when (view.getId()){
             R.id.buttontemp -> {
-                startActivity(Intent(applicationContext, SelectyearActivity::class.java))
+                startActivity(Intent(applicationContext, StartScreenActivity::class.java))
             }
 
         }
