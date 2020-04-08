@@ -1,5 +1,7 @@
 package com.example.customizecars.ui
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -42,7 +44,12 @@ class LocationFragment: Fragment(), View.OnClickListener {
         return v
     }
 
-
+    fun finish() {
+        val data = Intent()
+        data.putExtra("valuelocation", radiobuttonvaluelocation)
+        activity?.setResult(Activity.RESULT_OK, data)
+        activity?.finish()
+    }
 
 
 
@@ -61,39 +68,39 @@ class LocationFragment: Fragment(), View.OnClickListener {
                 when (view.getId()){
                     R.id.radioButtongford ->
                         if (checked) {
-                            radiobuttonvaluelocation = "gford"
+                            radiobuttonvaluelocation = "Germain Ford, 7250 Sawmill Rd, Columbus, OH 43235"
                             Log.d("Creating", radiobuttonvaluelocation)
                         }
                     R.id.radioButtontwest ->
                         if (checked) {
-                            radiobuttonvaluelocation = "twest"
+                            radiobuttonvaluelocation = "Toyota West, 1500 Auto Mall Dr, Columbus, OH 43228"
                             Log.d("Creating", radiobuttonvaluelocation)
                         }
                     R.id.radioButtonrhonda ->
                         if (checked) {
-                            radiobuttonvaluelocation = "rhonda"
+                            radiobuttonvaluelocation = "Roush Honda, 100 W Schrock Rd, Westerville, OH 43081"
                             Log.d("Creating", radiobuttonvaluelocation)
                         }
                     R.id.radioButtonlacura ->
                         if (checked) {
-                            radiobuttonvaluelocation = "lacura"
+                            radiobuttonvaluelocation = "Lindsay Acura, 5880 Scarborough Blvd, Columbus, OH 43232"
                             Log.d("Creating", radiobuttonvaluelocation)
                         }
                     R.id.radioButtonkbmw ->
                         if (checked) {
-                            radiobuttonvaluelocation = "kbmw"
+                            radiobuttonvaluelocation = "Kelly BMW, 4050 Morse Rd, Columbus, OH 43230"
                             Log.d("Creating", radiobuttonvaluelocation)
                         }
                     R.id.radioButtonginf ->
                         if (checked) {
-                            radiobuttonvaluelocation = "ginf"
+                            radiobuttonvaluelocation = "Gemain Infinity, 3833 Morse Rd, Columbus, OH 43219"
                             Log.d("Creating", radiobuttonvaluelocation)
                         }
                 }
             }
             when (view.getId()){
                 R.id.buttonlocationdone ->
-                    activity.finish()
+                    finish()
             }
         }
     }

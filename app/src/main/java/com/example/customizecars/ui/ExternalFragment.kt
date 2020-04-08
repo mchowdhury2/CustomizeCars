@@ -1,5 +1,7 @@
 package com.example.customizecars.ui
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -62,15 +64,14 @@ class ExternalFragment: Fragment(), View.OnClickListener {
         return v
     }
 
-
-
-
-
-
-
-
-
-
+    fun finish() {
+        val data = Intent()
+        data.putExtra("valuewheel", radiobuttonvaluewheel)
+        data.putExtra("valuebumper", radiobuttonvaluebumper)
+        data.putExtra("valueengine", radiobuttonvalueengine)
+        activity?.setResult(Activity.RESULT_OK, data)
+        activity?.finish()
+    }
 
 
     override fun onClick(view: View) {
@@ -85,69 +86,69 @@ class ExternalFragment: Fragment(), View.OnClickListener {
                 when (view.getId()){
                     R.id.radioButtonextret ->
                         if (checked){
-                            radiobuttonvaluewheel = "extret"
+                            radiobuttonvaluewheel = "Retribution"
                             Log.d("Creating", radiobuttonvaluewheel)
                         }
                     R.id.radioButtonextmr143 ->
                         if (checked){
-                            radiobuttonvaluewheel = "extmr143"
+                            radiobuttonvaluewheel = " MR143 CS6"
                             Log.d("Creating", radiobuttonvaluewheel)
                         }
                     R.id.radioButtonextpro ->
                         if (checked){
-                            radiobuttonvaluewheel = "extpro"
+                            radiobuttonvaluewheel = "Prophecy"
                             Log.d("Creating", radiobuttonvaluewheel)
                         }
                     R.id.radioButtonextxm6 ->
                         if (checked){
-                            radiobuttonvaluewheel = "extxm6"
+                            radiobuttonvaluewheel = "XM-6"
                             Log.d("Creating", radiobuttonvaluewheel)
                         }
                     R.id.radioButtonextstd ->
                         if (checked){
-                            radiobuttonvaluebumper = "extstd"
+                            radiobuttonvaluebumper = "Standard"
                             Log.d("Creating", radiobuttonvaluebumper)
                         }
                     R.id.radioButtonextdeep ->
                         if (checked){
-                            radiobuttonvaluebumper = "extdeep"
+                            radiobuttonvaluebumper = "Deep Drop"
                             Log.d("Creating", radiobuttonvaluebumper)
                         }
                     R.id.radioButtonexttube ->
                         if (checked){
-                            radiobuttonvaluebumper = "exttube"
+                            radiobuttonvaluebumper = "Tube"
                             Log.d("Creating", radiobuttonvaluebumper)
                         }
                     R.id.radioButtonextstep ->
                         if (checked){
-                            radiobuttonvaluebumper = "extstep"
+                            radiobuttonvaluebumper = "Step"
                             Log.d("Creating", radiobuttonvaluebumper)
                         }
                     R.id.radioButtonext2v6 ->
                         if (checked){
-                            radiobuttonvalueengine = "ext2V6"
+                            radiobuttonvalueengine = "2.0L V6"
                             Log.d("Creating", radiobuttonvalueengine)
                         }
                     R.id.radioButtonext25v6 ->
                         if (checked){
-                            radiobuttonvalueengine = "ext25v6"
+                            radiobuttonvalueengine = "2.5L V6"
                             Log.d("Creating", radiobuttonvalueengine)
                         }
                     R.id.radioButtonext3v6 ->
                         if (checked){
-                            radiobuttonvalueengine = "ext3v6"
+                            radiobuttonvalueengine = "3.0L V6"
                             Log.d("Creating", radiobuttonvalueengine)
                         }
                     R.id.radioButtonext3v8 ->
                         if (checked){
-                            radiobuttonvalueengine = "ext3v8"
+                            radiobuttonvalueengine = "3.0L V8"
                             Log.d("Creating", radiobuttonvalueengine)
                         }
                 }
             }
             when (view.getId()){
                 R.id.buttonextdone ->
-                    activity.finish()
+                    finish()
             }
         }
     }

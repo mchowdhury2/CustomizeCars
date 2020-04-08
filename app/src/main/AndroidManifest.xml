@@ -78,6 +78,7 @@
         <activity android:name=".ui.BmwActivity" />
         <activity android:name=".ui.AcuraActivity" />
         <activity android:name=".ui.MakeActivity" />
+        <activity android:name=".ui.StartScreenActivity" />
 
     </application>
 

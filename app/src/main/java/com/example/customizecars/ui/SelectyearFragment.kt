@@ -43,27 +43,39 @@ class SelectyearFragment : Fragment(), View.OnClickListener {
         if (activity != null) {
             when (view.id) {
                 R.id.button2020 -> {
-                    startActivity(Intent(activity.applicationContext, MakeActivity::class.java))
+                    val intent = (Intent(activity.applicationContext, MakeActivity::class.java))
+                    intent.putExtra("selectedyear", "2020")
+                    startActivity(intent)
                 }
 
                 R.id.button2019 -> {
-                    startActivity(Intent(activity.applicationContext, MakeActivity::class.java))
+                    val intent = (Intent(activity.applicationContext, MakeActivity::class.java))
+                    intent.putExtra("selectedyear", "2019")
+                    startActivity(intent)
                 }
 
                 R.id.button2018 -> {
-                    startActivity(Intent(activity.applicationContext, MakeActivity::class.java))
+                    val intent = (Intent(activity.applicationContext, MakeActivity::class.java))
+                    intent.putExtra("selectedyear", "2018")
+                    startActivity(intent)
                 }
 
                 R.id.button2017 -> {
-                    startActivity(Intent(activity.applicationContext, MakeActivity::class.java))
+                    val intent = (Intent(activity.applicationContext, MakeActivity::class.java))
+                    intent.putExtra("selectedyear", "2017")
+                    startActivity(intent)
                 }
 
                 R.id.button2016 -> {
-                    startActivity(Intent(activity.applicationContext, MakeActivity::class.java))
+                    val intent = (Intent(activity.applicationContext, MakeActivity::class.java))
+                    intent.putExtra("selectedyear", "2016")
+                    startActivity(intent)
                 }
 
                 R.id.button2015 -> {
-                    startActivity(Intent(activity.applicationContext, MakeActivity::class.java))
+                    val intent = (Intent(activity.applicationContext, MakeActivity::class.java))
+                    intent.putExtra("selectedyear", "2015")
+                    startActivity(intent)
                 }
             }
         }

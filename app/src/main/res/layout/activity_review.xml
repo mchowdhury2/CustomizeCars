@@ -12,10 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textreviewloc"
-        app:layout_constraintTop_toBottomOf="@+id/textreviewexteriorresult" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textreviewloc" />
 
     <TextView
         android:id="@+id/textreviewexteriorresult"
@@ -23,10 +23,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textreviewext"
-        app:layout_constraintTop_toBottomOf="@+id/textreviewinteriorresult" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textreviewext" />
 
     <TextView
         android:id="@+id/textreviewmodelresult"
@@ -91,7 +91,7 @@
         android:layout_marginTop="15dp"
         android:text="Interior:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textreviewmodel" />
+        app:layout_constraintTop_toBottomOf="@+id/textreviewmodelresult" />
 
     <TextView
         android:id="@+id/textreviewext"
@@ -102,7 +102,7 @@
         android:layout_marginTop="15dp"
         android:text="Exterior:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textreviewint" />
+        app:layout_constraintTop_toBottomOf="@+id/textreviewinteriorresult" />
 
     <Button
         android:id="@+id/buttonreviewsub"
@@ -123,7 +123,7 @@
         android:layout_marginTop="15dp"
         android:text="Location:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textreviewext" />
+        app:layout_constraintTop_toBottomOf="@+id/textreviewexteriorresult" />
 
     <TextView
         android:id="@+id/textreviewyearresult"
@@ -153,8 +153,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textreviewint"
-        app:layout_constraintTop_toBottomOf="@+id/textreviewmodelresult" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textreviewint" />
 </androidx.constraintlayout.widget.ConstraintLayout>

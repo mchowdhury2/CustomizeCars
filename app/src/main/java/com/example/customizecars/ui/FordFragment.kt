@@ -1,5 +1,6 @@
 package com.example.customizecars.ui
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -14,10 +15,16 @@ import com.example.customizecars.R
 class FordFragment: Fragment(), View.OnClickListener {
 
     lateinit var radiobuttonvalue: String
+    lateinit var selectedyear: String
+    var valueinterior =  ArrayList<String>()
+    var valueexterior = ArrayList<String>()
+    lateinit var valueselectedlocation: String
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.activity_ford, container, false)
         v.setOnClickListener(this)
+
+        selectedyear = getActivity()!!.getIntent().getStringExtra("selectedyear")
 
         val radiobuttonfiesta = v.findViewById<RadioButton>(R.id.radioButtonfiesta)
         radiobuttonfiesta.setOnClickListener(this)
@@ -72,32 +79,32 @@ class FordFragment: Fragment(), View.OnClickListener {
                 when (view.getId()) {
                     R.id.radioButtonfiesta ->
                         if (checked) {
-                            radiobuttonvalue = "fiesta"
+                            radiobuttonvalue = "Fiesta"
                             Log.d("Creating", radiobuttonvalue)
                         }
                     R.id.radioButtonfusion ->
                         if (checked) {
-                            radiobuttonvalue = "fusion"
+                            radiobuttonvalue = "Fusion"
                             Log.d("Creating", radiobuttonvalue)
                         }
                     R.id.radioButtonmustang ->
                         if (checked) {
-                            radiobuttonvalue = "mustang"
+                            radiobuttonvalue = "Mustang"
                             Log.d("Creating", radiobuttonvalue)
                         }
                     R.id.radioButtonshelby ->
                         if (checked) {
-                            radiobuttonvalue = "shelby"
+                            radiobuttonvalue = "Shelby"
                             Log.d("Creating", radiobuttonvalue)
                         }
                     R.id.radioButtonedge ->
                         if (checked) {
-                            radiobuttonvalue = "edge"
+                            radiobuttonvalue = "Edge"
                             Log.d("Creating", radiobuttonvalue)
                         }
                     R.id.radioButtonescape ->
                         if (checked) {
-                            radiobuttonvalue = "escape"
+                            radiobuttonvalue = "Escape"
                             Log.d("Creating", radiobuttonvalue)
                         }
 
@@ -105,40 +112,88 @@ class FordFragment: Fragment(), View.OnClickListener {
             }
             when (view.getId()) {
                 R.id.buttoninternal -> {
-                    startActivity(
-                        Intent(
-                            activity.applicationContext,
-                            InternalActivity::class.java
-                        )
-                    )
+                    val intent = (
+                            Intent(
+                                activity.applicationContext,
+                                InternalActivity::class.java
+                            )
+                            )
+                    startActivityForResult(intent, 1)
                 }
                 R.id.buttonexternal -> {
-                    startActivity(
-                        Intent(
-                            activity.applicationContext,
-                            ExternalActivity::class.java
-                        )
-                    )
+                    val intent = (
+                            Intent(
+                                activity.applicationContext,
+                                ExternalActivity::class.java
+                            )
+                            )
+                    startActivityForResult(intent, 2)
                 }
 
                 R.id.buttonlocation -> {
-                    startActivity(
-                        Intent(
-                            activity.applicationContext,
-                            LocationActivity::class.java
-                        )
-                    )
+                    val intent = (
+                            Intent(
+                                activity.applicationContext,
+                                LocationActivity::class.java
+                            )
+                            )
+                    startActivityForResult(intent, 3)
                 }
 
                 R.id.buttonreview -> {
-                    startActivity(
-                        Intent(
-                            activity.applicationContext,
-                            ReviewActivity::class.java
-                        )
-                    )
+                    val intent = (
+                            Intent(
+                                activity.applicationContext,
+                                ReviewActivity::class.java
+                            )
+                            )
+                    intent.putExtra("selectedyear", selectedyear)
+                    intent.putExtra("selectedmake", "Ford")
+                    intent.putExtra("selectedmodel", radiobuttonvalue)
+                    intent.putExtra("valueinterior", valueinterior)
+                    intent.putExtra("valueexterior", valueexterior)
+                    intent.putExtra("valueselectedlocation", valueselectedlocation)
+                    startActivity(intent)
                 }
             }
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
+            val valuecolor = data?.extras?.get("valuecolor").toString()
+            Log.d("Creating", valuecolor)
+            val valuescreen = data?.extras?.get("valuescreen").toString()
+            Log.d("Creating", valuescreen)
+            val valuesunroof = data?.extras?.get("valuesunroof").toString()
+            Log.d("Creating", valuesunroof)
+            val valuegps = data?.extras?.get("valuegps").toString()
+            Log.d("Creating", valuegps)
+            valueinterior.add(valuecolor)
+            Log.d("array", valueinterior.get(0))
+            valueinterior.add(valuescreen)
+            valueinterior.add(valuesunroof)
+            valueinterior.add(valuegps)
+        }
+
+        if (requestCode == 2 && resultCode == Activity.RESULT_OK){
+            val valuewheel = data?.extras?.get("valuewheel").toString()
+            Log.d("Creating", valuewheel)
+            val valuebumper = data?.extras?.get("valuebumper").toString()
+            Log.d("Creating", valuebumper)
+            val valueengine = data?.extras?.get("valueengine").toString()
+            Log.d("Creating", valueengine)
+            valueexterior.add(valuewheel)
+            valueexterior.add(valuebumper)
+            valueexterior.add(valueengine)
+        }
+
+        if (requestCode == 3 && resultCode == Activity.RESULT_OK){
+            val valuelocation = data?.extras?.get("valuelocation").toString()
+            Log.d("Creating", valuelocation)
+            valueselectedlocation = valuelocation
         }
     }
 }

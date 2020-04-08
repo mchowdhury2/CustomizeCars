@@ -1,19 +1,31 @@
 package com.example.customizecars.ui
 
 import android.content.Intent
+import android.content.Intent.getIntentOld
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.customizecars.R
+import java.util.zip.Inflater
+
 
 class MakeFragment : Fragment(), View.OnClickListener {
 
+    lateinit var selectedyear: String
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
         val v = inflater.inflate(R.layout.activity_make, container, false)
         v.setOnClickListener(this)
+
+        selectedyear = getActivity()!!.getIntent().getStringExtra("selectedyear")
+     //   Log.d("Creating", selectedyear)
+
+
 
         val buttonacura = v.findViewById<Button>(R.id.buttonacura)
         buttonacura.setOnClickListener(this)
@@ -46,22 +58,34 @@ class MakeFragment : Fragment(), View.OnClickListener {
         if (activity != null){
             when(view.id){
                 R.id.buttonacura -> {
-                    startActivity(Intent(activity.applicationContext, AcuraActivity::class.java))
+                    val intent = (Intent(activity.applicationContext, AcuraActivity::class.java))
+                    intent.putExtra("selectedyear", selectedyear)
+                    startActivity(intent)
                 }
                 R.id.buttonbmw -> {
-                    startActivity(Intent(activity.applicationContext, BmwActivity::class.java))
+                    val intent = (Intent(activity.applicationContext, BmwActivity::class.java))
+                    intent.putExtra("selectedyear", selectedyear)
+                    startActivity(intent)
                 }
                 R.id.buttonhonda -> {
-                    startActivity(Intent(activity.applicationContext, HondaActivity::class.java))
+                    val intent = (Intent(activity.applicationContext, HondaActivity::class.java))
+                    intent.putExtra("selectedyear", selectedyear)
+                    startActivity(intent)
                 }
                 R.id.buttontoyota -> {
-                    startActivity(Intent(activity.applicationContext, ToyotaActivity::class.java))
+                    val intent = (Intent(activity.applicationContext, ToyotaActivity::class.java))
+                    intent.putExtra("selectedyear", selectedyear)
+                    startActivity(intent)
                 }
                 R.id.buttonford -> {
-                    startActivity(Intent(activity.applicationContext, FordActivity::class.java))
+                    val intent = (Intent(activity.applicationContext, FordActivity::class.java))
+                    intent.putExtra("selectedyear", selectedyear)
+                    startActivity(intent)
                 }
                 R.id.buttoninfinity -> {
-                    startActivity(Intent(activity.applicationContext, InfinityActivity::class.java))
+                    val intent = (Intent(activity.applicationContext, InfinityActivity::class.java))
+                    intent.putExtra("selectedyear", selectedyear)
+                    startActivity(intent)
                 }
             }
         }

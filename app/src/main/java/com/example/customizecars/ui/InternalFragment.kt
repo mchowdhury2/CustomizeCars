@@ -1,5 +1,8 @@
 package com.example.customizecars.ui
 
+import android.app.Activity
+import android.app.Activity.RESULT_OK
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -63,7 +66,15 @@ class InternalFragment: Fragment(), View.OnClickListener {
         return v
     }
 
-
+        fun finish() {
+            val data = Intent()
+            data.putExtra("valuecolor", radiobuttonvaluecolor)
+            data.putExtra("valuescreen", radiobuttonvaluescreen)
+            data.putExtra("valuesunroof", radiobuttonvaluesunroof)
+            data.putExtra("valuegps", radiobuttonvaluegps)
+            activity?.setResult(RESULT_OK, data)
+            activity?.finish()
+        }
 
 
 
@@ -103,49 +114,56 @@ class InternalFragment: Fragment(), View.OnClickListener {
                         }
                     R.id.radioButtonint4_5 ->
                         if (checked){
-                            radiobuttonvaluescreen = "4_5"
+                            radiobuttonvaluescreen = "4.5\""
                             Log.d("Creating", radiobuttonvaluescreen)
                         }
                     R.id.radioButtonint5_0 ->
                         if (checked){
-                            radiobuttonvaluescreen = "5_0"
+                            radiobuttonvaluescreen = "5.0\""
                             Log.d("Creating", radiobuttonvaluescreen)
                         }
                     R.id.radioButtonint5_5 ->
                         if (checked){
-                            radiobuttonvaluescreen = "5_5"
+                            radiobuttonvaluescreen = "5.5\""
                             Log.d("Creating", radiobuttonvaluescreen)
                         }
                     R.id.radioButtonint6_0 ->
                         if (checked){
-                            radiobuttonvaluescreen = "6_0"
+                            radiobuttonvaluescreen = "6.0\""
                             Log.d("Creating", radiobuttonvaluescreen)
                         }
                     R.id.radioButtonsunyes ->
                         if (checked){
-                            radiobuttonvaluesunroof = "sunyes"
+                            radiobuttonvaluesunroof = "Yes"
                             Log.d("Creating", radiobuttonvaluesunroof)
                         }
                     R.id.radioButtonsunno ->
                         if (checked){
-                            radiobuttonvaluesunroof = "sunno"
+                            radiobuttonvaluesunroof = "No"
                             Log.d("Creating", radiobuttonvaluesunroof)
                         }
                     R.id.radioButtongpsyes ->
                         if (checked){
-                            radiobuttonvaluegps = "gpsyes"
+                            radiobuttonvaluegps = "Yes"
                             Log.d("Creating", radiobuttonvaluegps)
                         }
                     R.id.radioButtongpsno ->
                         if (checked){
-                            radiobuttonvaluegps = "gpsno"
+                            radiobuttonvaluegps = "No"
                             Log.d("Creating", radiobuttonvaluegps)
                         }
                 }
             }
             when (view.getId()){
                 R.id.buttoninternaldone ->
-                    activity.finish()
+                    finish()
+                 //   val intent = activity.intent
+//                    val intent = Intent(this, AcuraFragment::class.java)
+                //    activity.intent.putExtra("intcolor", radiobuttonvaluecolor)
+////                    var value = Intent.putExtra("intcolor", radiobuttonvaluecolor)
+                 //setResult(Activity.RESULT_OK, activity.intent!)
+                  //  activity.finish()
+
             }
         }
     }
