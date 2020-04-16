@@ -8,17 +8,17 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.customizecars.R
-import kotlinx.android.synthetic.main.activity_settings_edit.*
+import kotlinx.android.synthetic.main.activity_signup.*
 
 
-class SettingsEditFragment : Fragment(), View.OnClickListener {
+class SignUpFragment : Fragment(), View.OnClickListener {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.activity_settings_edit, container, false)
         v.setOnClickListener(this)
 
-        val buttonSaveExit = v.findViewById<Button>(R.id.buttonSaveExit)
-        buttonSaveExit.setOnClickListener(this)
+        val buttonDone = v.findViewById<Button>(R.id.buttonDone)
+        buttonDone.setOnClickListener(this)
 
 
         return v
@@ -29,12 +29,14 @@ class SettingsEditFragment : Fragment(), View.OnClickListener {
 
         if (activity != null) {
             when (view.id) {
-                R.id.buttonSaveExit -> {
-                    val password = editPassword.text.toString()
+
+
+                R.id.buttonDone -> {
                     val name = editName.text.toString()
                     val email = editEmail.text.toString()
                     val postalAddress = editPostalAddress.text.toString()
                     val phoneNumber = editPhoneNumber.text.toString()
+
 
                     startActivity(Intent(activity.applicationContext, SettingsActivity::class.java))
                 }
