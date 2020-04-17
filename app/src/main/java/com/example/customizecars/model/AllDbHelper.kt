@@ -9,7 +9,7 @@ class AllDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, n
 
     private val SQL_CREATE_ACCOUNT =
         "CREATE TABLE ${DBSchema.AccountsTable.TABLENAME} (" +
-                "${DBSchema.AccountsTable.Cols.ACCTNO} INTEGER PRIMARY KEY," +
+                "${DBSchema.AccountsTable.Cols.ACCTNO} INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "${DBSchema.AccountsTable.Cols.NAME} TEXT," +
                 "${DBSchema.AccountsTable.Cols.PASSWORD} TEXT)"
 
@@ -122,4 +122,5 @@ class AllDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, n
         const val DATABASE_VERSION = 1
         const val DATABASE_NAME = "CustomizeCars.db"
     }
+
 }

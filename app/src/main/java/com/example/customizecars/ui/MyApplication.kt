@@ -1,12 +1,18 @@
 package com.example.customizecars.ui
 
+import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 
-class ExternalActivity : SingleFragmentActivity() {
+class MyApplication : Application() {
 
-    override fun createFragment(): Fragment {
-        return ExternalFragment()
+    companion object {
+        var userProfileId = ""
     }
+
+    override fun onCreate() {
+        super.onCreate()
+    }
+
 }
