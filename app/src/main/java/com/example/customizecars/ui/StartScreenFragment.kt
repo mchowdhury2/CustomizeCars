@@ -20,9 +20,8 @@ class StartScreenFragment : Fragment(), View.OnClickListener {
         val buttonStart = v.findViewById<Button>(R.id.buttonStart)
         buttonStart.setOnClickListener(this)
 
-
-        val load = v.findViewById<Button>(R.id.buttonLoad)
-        load.setOnClickListener(this)
+        //val load = v.findViewById<Button>(R.id.buttonLoad)
+        //load.setOnClickListener(this)
 
         val settings = v.findViewById<ImageButton>(R.id.imageButtonSettings)
         settings.setOnClickListener(this)
@@ -40,13 +39,12 @@ class StartScreenFragment : Fragment(), View.OnClickListener {
                     startActivity(Intent(activity.applicationContext, SelectyearActivity::class.java))
                 }
 
-
-                R.id.buttonLoad -> {
-                    startActivity(Intent(activity.applicationContext, ReviewActivity::class.java))
-                }
+                //R.id.buttonLoad -> {
+                //    startActivity(Intent(activity.applicationContext, ReviewActivity::class.java))
+                //}
 
                 R.id.imageButtonSettings -> {
-                    startActivity(Intent(activity.applicationContext, SettingsActivity::class.java))
+                    startActivity(Intent(activity.applicationContext, SettingsEditActivity::class.java))
                 }
 
             }

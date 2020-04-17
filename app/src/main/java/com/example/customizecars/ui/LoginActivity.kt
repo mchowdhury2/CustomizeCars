@@ -111,38 +111,55 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         val dbHelper = AllDbHelper(this)
         val db = dbHelper.readableDatabase
-        val sortOrder = "${DBSchema.AccountsTable.Cols.ACCTNO} DESC"
+        val selection = "${DBSchema.UsersTable.Cols.USERACCTNO} = ?"
+        //val selectionArgs = arrayOf(userProfileId)
+        val selectionArgs = arrayOf(username)
+        val sortOrder = "${DBSchema.UsersTable.Cols.USERACCTNO} DESC"
 
         val cursor = db.query(
-            DBSchema.AccountsTable.TABLENAME,
+            DBSchema.UsersTable.TABLENAME,
             null,
-            null,
-            null,
+            selection,
+            selectionArgs,
             null,
             null,
             sortOrder
         )
 
         //cursor.moveToNext()
-        val acctno = cursor.getColumnIndex("acctnumber")
+        val grabbedID = cursor.getColumnIndex("acctnumber")
+        val grabbedPassword = cursor.getColumnIndex("password")
 
-        val intent = Intent(this, DisplayUsernameActivity::class.java).apply {
-            putExtra("com.example.customizecars.USERNAME", acctno)
+        if (grabbedPassword.equals(password)){
+            MyApplication.userProfileId = grabbedID.toString()
+        } else {
+            Toast.makeText(applicationContext, "Wrong username or password", Toast.LENGTH_LONG).show()
         }
-        intent.putExtra("com.example.customizecars.PASSWORD", password)
+        val intent = Intent(this, StartScreenActivity::class.java)
         startActivity(intent)
     }
 
     /** Called when the user taps the Signup button */
     fun signup(view: View) {
         val editText = findViewById<EditText>(R.id.editText)
-        val username = editText.text.toString()
-        val password = editText5.text.toString()
-        val intent = Intent(this, DBInsertActivity::class.java).apply {
-            putExtra("com.example.customizecars.USERNAME", username)
-        }
-        intent.putExtra("com.example.customizecars.PASSWORD", password)
-        startActivity(intent)
+        //val username = editText.text.toString()
+        //val password = editText5.text.toString()
+        //val intent = Intent(this, DBInsertActivity::class.java).apply {
+        //    putExtra("com.example.customizecars.USERNAME", username)
+        //}
+        //intent.putExtra("com.example.customizecars.PASSWORD", password)
+
+
+        //val dbHelper = AllDbHelper(this)
+        //val db = dbHelper.writableDatabase
+
+        //val values = ContentValues().apply {
+        //    put(DBSchema.AccountsTable.Cols.ACCTNO, username)
+        //    put(DBSchema.AccountsTable.Cols.PASSWORD, password)
+        //}
+        //val newRowId = db?.insert(DBSchema.AccountsTable.TABLENAME, null, values)
+
+        startActivity(Intent(applicationContext, SignUpActivity::class.java))
     }
 
     /** Called when Main activity paused
