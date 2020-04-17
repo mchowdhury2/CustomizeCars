@@ -10,19 +10,25 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.RadioButton
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.customizecars.R
+import kotlinx.android.synthetic.main.activity_external.*
+import kotlinx.android.synthetic.main.activity_internal.*
 
 class InternalFragment: Fragment(), View.OnClickListener {
 
-    lateinit var radiobuttonvaluecolor: String
-    lateinit var radiobuttonvaluescreen: String
-    lateinit var radiobuttonvaluesunroof: String
-    lateinit var radiobuttonvaluegps: String
+    var radiobuttonvaluecolor = "null"
+    var radiobuttonvaluescreen = "null"
+    var radiobuttonvaluesunroof = "null"
+    var radiobuttonvaluegps = "null"
+    lateinit var errorinternal: TextView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.activity_internal, container, false)
         v.setOnClickListener(this)
+
+        errorinternal = v.findViewById(R.id.errorinernal)
 
         val radiobuttonintwhite = v.findViewById<RadioButton>(R.id.radioButtonintwhite)
         radiobuttonintwhite.setOnClickListener(this)
@@ -67,13 +73,13 @@ class InternalFragment: Fragment(), View.OnClickListener {
     }
 
         fun finish() {
-            val data = Intent()
-            data.putExtra("valuecolor", radiobuttonvaluecolor)
-            data.putExtra("valuescreen", radiobuttonvaluescreen)
-            data.putExtra("valuesunroof", radiobuttonvaluesunroof)
-            data.putExtra("valuegps", radiobuttonvaluegps)
-            activity?.setResult(RESULT_OK, data)
-            activity?.finish()
+                val data = Intent()
+                data.putExtra("valuecolor", radiobuttonvaluecolor)
+                data.putExtra("valuescreen", radiobuttonvaluescreen)
+                data.putExtra("valuesunroof", radiobuttonvaluesunroof)
+                data.putExtra("valuegps", radiobuttonvaluegps)
+                activity?.setResult(RESULT_OK, data)
+                activity?.finish()
         }
 
 
@@ -85,7 +91,8 @@ class InternalFragment: Fragment(), View.OnClickListener {
 
     override fun onClick(view: View) {
         val activity = activity
-        var checked: Boolean
+        var checked = false
+
 
         if (activity != null){
             if (view is RadioButton){
@@ -155,14 +162,15 @@ class InternalFragment: Fragment(), View.OnClickListener {
                 }
             }
             when (view.getId()){
+
                 R.id.buttoninternaldone ->
-                    finish()
-                 //   val intent = activity.intent
-//                    val intent = Intent(this, AcuraFragment::class.java)
-                //    activity.intent.putExtra("intcolor", radiobuttonvaluecolor)
-////                    var value = Intent.putExtra("intcolor", radiobuttonvaluecolor)
-                 //setResult(Activity.RESULT_OK, activity.intent!)
-                  //  activity.finish()
+
+                    if (radiobuttonvaluecolor != "null" && radiobuttonvaluegps != "null" && radiobuttonvaluescreen != "null" && radiobuttonvaluesunroof != "null") {
+                        finish()
+                    }
+                    else {
+                        errorinternal.setText("Error: You have not selected one of the options.")
+                    }
 
             }
         }

@@ -19,11 +19,6 @@ class StartScreenFragment : Fragment(), View.OnClickListener {
         val buttonStart = v.findViewById<Button>(R.id.buttonStart)
         buttonStart.setOnClickListener(this)
 
-        //val load = v.findViewById<Button>(R.id.load)
-        //load.setOnClickListener(this)
-
-        //val settings = v.findViewById<Button>(R.id.settings)
-        //settings.setOnClickListener(this)
 
         return v
     }
@@ -37,13 +32,6 @@ class StartScreenFragment : Fragment(), View.OnClickListener {
                     startActivity(Intent(activity.applicationContext, SelectyearActivity::class.java))
                 }
 
-                //R.id.load -> {
-                //    startActivity(Intent(activity.applicationContext, MakeActivity::class.java))
-                //}
-
-                //R.id.settings -> {
-                //    startActivity(Intent(activity.applicationContext, MakeActivity::class.java))
-                //}
             }
         }
     }

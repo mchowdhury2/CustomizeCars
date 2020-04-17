@@ -11,12 +11,13 @@ import android.widget.Button
 import android.widget.RadioButton
 import androidx.fragment.app.Fragment
 import com.example.customizecars.R
+import kotlinx.android.synthetic.main.activity_external.*
 
 class ExternalFragment: Fragment(), View.OnClickListener {
 
-    lateinit var radiobuttonvaluewheel: String
-    lateinit var radiobuttonvaluebumper: String
-    lateinit var radiobuttonvalueengine: String
+    var radiobuttonvaluewheel = "null"
+    var radiobuttonvaluebumper = "null"
+    var radiobuttonvalueengine= "null"
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.activity_external, container, false)
@@ -148,7 +149,12 @@ class ExternalFragment: Fragment(), View.OnClickListener {
             }
             when (view.getId()){
                 R.id.buttonextdone ->
-                    finish()
+                    if (radiobuttonvaluewheel != "null" && radiobuttonvaluebumper != "null" && radiobuttonvalueengine != "null") {
+                        finish()
+                    }
+                    else {
+                        errorexternal.setText("Error: You have not selected one of the options.")
+                    }
             }
         }
     }

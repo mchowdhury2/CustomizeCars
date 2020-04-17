@@ -41,7 +41,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         // Create a new map of values, where column names are the keys
         val values = ContentValues().apply {
-            put(DBSchema.UsersTable.Cols.USERACCTNO, 110)
             put(DBSchema.UsersTable.Cols.NAME, "Akhlak")
             put(DBSchema.UsersTable.Cols.ADDRESS, "Columbus,OH")
             put(DBSchema.UsersTable.Cols.EMAIL, "example.##@osu.edu")
