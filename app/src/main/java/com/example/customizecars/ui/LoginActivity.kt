@@ -147,18 +147,18 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     /** Called when Main activity paused
      * show message to screen */
-    override fun onPause() {
-
-        super.onPause()
-        Toast.makeText(applicationContext, "onPause called", Toast.LENGTH_LONG).show()
-    }
+//    override fun onPause() {
+//
+//        super.onPause()
+//        Toast.makeText(applicationContext, "onPause called", Toast.LENGTH_LONG).show()
+//    }
 
     /** Called when Main activity resumed
      * show message to screen */
-    override fun onResume(){
-        super.onResume()
-        Toast.makeText(applicationContext, "onResume called", Toast.LENGTH_LONG).show()
-    }
+//    override fun onResume(){
+//        super.onResume()
+//        Toast.makeText(applicationContext, "onResume called", Toast.LENGTH_LONG).show()
+//    }
 
 
     override fun onClick(view: View) {
