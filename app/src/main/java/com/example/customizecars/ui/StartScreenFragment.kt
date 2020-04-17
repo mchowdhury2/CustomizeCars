@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import com.example.customizecars.R
 
@@ -20,6 +21,13 @@ class StartScreenFragment : Fragment(), View.OnClickListener {
         buttonStart.setOnClickListener(this)
 
 
+        val load = v.findViewById<Button>(R.id.buttonLoad)
+        load.setOnClickListener(this)
+
+        val settings = v.findViewById<ImageButton>(R.id.imageButtonSettings)
+        settings.setOnClickListener(this)
+
+
         return v
     }
 
@@ -30,6 +38,15 @@ class StartScreenFragment : Fragment(), View.OnClickListener {
             when (view.id) {
                 R.id.buttonStart -> {
                     startActivity(Intent(activity.applicationContext, SelectyearActivity::class.java))
+                }
+
+
+                R.id.buttonLoad -> {
+                    startActivity(Intent(activity.applicationContext, ReviewActivity::class.java))
+                }
+
+                R.id.imageButtonSettings -> {
+                    startActivity(Intent(activity.applicationContext, SettingsActivity::class.java))
                 }
 
             }

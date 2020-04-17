@@ -30,11 +30,4 @@ class DisplayUsernameActivity : AppCompatActivity() {
         }
     }
 
-    fun showMap(view: View){
-
-    val intent = Intent(this, MapsActivity::class.java).apply {
-    }
-    startActivity(intent)
-    }
-
 }

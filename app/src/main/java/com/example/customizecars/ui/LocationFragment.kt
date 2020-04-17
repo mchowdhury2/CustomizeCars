@@ -2,6 +2,7 @@ package com.example.customizecars.ui
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,6 +13,7 @@ import android.widget.RadioButton
 import androidx.fragment.app.Fragment
 import com.example.customizecars.R
 import kotlinx.android.synthetic.main.activity_location.*
+
 
 class LocationFragment: Fragment(), View.OnClickListener {
 
@@ -42,6 +44,9 @@ class LocationFragment: Fragment(), View.OnClickListener {
         val buttonlocationdone = v.findViewById<Button>(R.id.buttonlocationdone)
         buttonlocationdone.setOnClickListener(this)
 
+        val buttongooglemap = v.findViewById<Button>(R.id.buttongooglemap)
+        buttongooglemap.setOnClickListener(this)
+
         return v
     }
 
@@ -53,6 +58,20 @@ class LocationFragment: Fragment(), View.OnClickListener {
     }
 
 
+    fun showMap(radiobuttonvaluelocation: String){
+
+        // Create a Uri from an intent string. Use the result to create an Intent.
+        val gmmIntentUri: Uri = Uri.parse("geo:39.9961755,-83.018795?q=" + radiobuttonvaluelocation)
+
+        // Create an Intent from gmmIntentUri. Set the action to ACTION_VIEW
+        val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+        // Make the Intent explicit by setting the Google Maps package
+        // Make the Intent explicit by setting the Google Maps package
+        mapIntent.setPackage("com.google.android.apps.maps")
+
+        // Attempt to start an activity that can handle the Intent
+        startActivity(mapIntent)
+    }
 
 
 
@@ -99,14 +118,19 @@ class LocationFragment: Fragment(), View.OnClickListener {
                         }
                 }
             }
+
             when (view.getId()){
                 R.id.buttonlocationdone ->
+
                     if (radiobuttonvaluelocation != "null") {
                         finish()
                     }
                     else {
                         errorlocation.setText("Error: You have not selected one of the options.")
                     }
+
+                R.id.buttongooglemap ->
+                    showMap(radiobuttonvaluelocation)
             }
         }
     }
