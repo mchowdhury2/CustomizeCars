@@ -12,11 +12,12 @@ import android.widget.Button
 import android.widget.RadioButton
 import androidx.fragment.app.Fragment
 import com.example.customizecars.R
+import kotlinx.android.synthetic.main.activity_location.*
 
 
 class LocationFragment: Fragment(), View.OnClickListener {
 
-    lateinit var radiobuttonvaluelocation: String
+    var radiobuttonvaluelocation = "null"
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.activity_location, container, false)
@@ -42,6 +43,9 @@ class LocationFragment: Fragment(), View.OnClickListener {
 
         val buttonlocationdone = v.findViewById<Button>(R.id.buttonlocationdone)
         buttonlocationdone.setOnClickListener(this)
+
+        val buttongooglemap = v.findViewById<Button>(R.id.buttongooglemap)
+        buttongooglemap.setOnClickListener(this)
 
         return v
     }
@@ -117,6 +121,15 @@ class LocationFragment: Fragment(), View.OnClickListener {
 
             when (view.getId()){
                 R.id.buttonlocationdone ->
+
+                    if (radiobuttonvaluelocation != "null") {
+                        finish()
+                    }
+                    else {
+                        errorlocation.setText("Error: You have not selected one of the options.")
+                    }
+
+                R.id.buttongooglemap ->
                     showMap(radiobuttonvaluelocation)
             }
         }

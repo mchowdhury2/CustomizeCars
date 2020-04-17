@@ -24,81 +24,102 @@ class DBSchema {
         }
     }
 
-    internal object CustomizesTable {
-        val TABLENAME = "customizs"
+    internal object ReviewsTable {
+        val TABLENAME = "reviews"
 
         internal object Cols {
-            val SAVEID = "saveid"
-            val CUSACCTNO = "cusacctno"
+            val YEAR = "year"
+            val MAKE = "make"
+            val MODEL = "model"
+            val INTDASHCOLOR = "interiordashboardcolor"
+            val INTSCREEN = "interiorscreen"
+            val INTSUNROOF = "interiorsunroof"
+            val INTGPS = "interiorgps"
+            val EXTWHEEL = "externalwheel"
+            val EXTBUMPERS = "externalbumpers"
+            val EXTENGINE = "externalengine"
+            val LOCATION = "location"
+            val USERACCTNO = "useracctno"
         }
     }
 
+//    internal object CustomizesTable {
+//        val TABLENAME = "customizs"
+//
+//        internal object Cols {
+//            val SAVEID = "saveid"
+//            val CUSACCTNO = "cusacctno"
+//        }
+//    }
+//
+//
+//    internal object CartypesTable {
+//        val TABLENAME = "cartypes"
+//
+//        internal object Cols {
+//            val NAME = "name"
+//        }
+//    }
+//
+//    internal object LocationsTable {
+//        val TABLENAME = "locations"
+//
+//        internal object Cols {
+//            val NAME = "name"
+//            val ADDRESS = "address"
+//            val PHONE = "phone"
+//            val EMAIL = "email"
+//            val CARTYPENAME = "cartypename"
+//        }
+//    }
+//
+//
+//    internal object ModelsTable {
+//        val TABLENAME = "models"
+//
+//        internal object Cols {
+//            val NAME = "name"
+//            val MODELNO = "modelno"
+//            val CARTYPENAME = "cartypename"
+//        }
+//    }
+//
+//
+//    internal object ColorsTable {
+//        val TABLENAME = "colors"
+//
+//        internal object Cols {
+//            val NAME = "name"
+//            val SAVEID = "saveid"
+//            val MODLENAME = "modelname"
+//        }
+//    }
+//
+//
+//    internal object ExteriorsTable {
+//        val TABLENAME = "exteriors"
+//
+//        internal object Cols {
+//            val EXTERIORID = "exteriorid"
+//            val WHEEL = "wheel"
+//            val BUMPER = "bumper"
+//            val ENGINE = "engine"
+//            val SAVEID = "saveid"
+//        }
+//    }
+//
+//
+//    internal object InteriorsTable {
+//        val TABLENAME = "interiors"
+//
+//        internal object Cols {
+//            val INTERIORID = "interiorid"
+//            val DASHBOARD = "dashboard"
+//            val SUNROOF = "sunroof"
+//            val SCREENSIZE = "screensize"
+//            val SAVEID = "saveid"
+//        }
+//    }
 
-    internal object CartypesTable {
-        val TABLENAME = "cartypes"
 
-        internal object Cols {
-            val NAME = "name"
-        }
-    }
-
-    internal object LocationsTable {
-        val TABLENAME = "locations"
-
-        internal object Cols {
-            val NAME = "name"
-            val ADDRESS = "address"
-            val PHONE = "phone"
-            val EMAIL = "email"
-            val CARTYPENAME = "cartypename"
-        }
-    }
-
-
-    internal object ModelsTable {
-        val TABLENAME = "models"
-
-        internal object Cols {
-            val NAME = "name"
-            val MODELNO = "modelno"
-            val CARTYPENAME = "cartypename"
-        }
-    }
-
-
-    internal object ColorsTable {
-        val TABLENAME = "colors"
-
-        internal object Cols {
-            val NAME = "name"
-            val SAVEID = "saveid"
-            val MODLENAME = "modelname"
-        }
-    }
-
-
-    internal object ExteriorsTable {
-        val TABLENAME = "exteriors"
-
-        internal object Cols {
-            val EXTERIORID = "exteriorid"
-            val WHEEL = "wheel"
-            val BUMPER = "bumper"
-            val ENGINE = "engine"
-            val SAVEID = "saveid"
-        }
-    }
-
-
-    internal object InteriorsTable {
-        val TABLENAME = "interiors"
-
-        internal object Cols {
-            val INTERIORID = "interiorid"
-            val DASHBOARD = "dashboard"
-            val SUNROOF = "sunroof"
-            val SCREENSIZE = "screensize"
-            val SAVEID = "saveid"
-        }
-    }
 }

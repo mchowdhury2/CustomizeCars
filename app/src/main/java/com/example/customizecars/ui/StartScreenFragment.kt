@@ -26,6 +26,7 @@ class StartScreenFragment : Fragment(), View.OnClickListener {
         val settings = v.findViewById<ImageButton>(R.id.imageButtonSettings)
         settings.setOnClickListener(this)
 
+
         return v
     }
 
@@ -45,6 +46,7 @@ class StartScreenFragment : Fragment(), View.OnClickListener {
                 R.id.imageButtonSettings -> {
                     startActivity(Intent(activity.applicationContext, SettingsEditActivity::class.java))
                 }
+
             }
         }
     }

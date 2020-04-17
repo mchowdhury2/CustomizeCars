@@ -11,9 +11,13 @@ import android.widget.Button
 import android.widget.RadioButton
 import androidx.fragment.app.Fragment
 import com.example.customizecars.R
+import kotlinx.android.synthetic.main.activity_honda.*
 
 class HondaFragment: Fragment(), View.OnClickListener {
-    lateinit var radiobuttonvalue: String
+    var radiobuttonvalue = "null"
+    var checkinternal = "null"
+    var checkexternal = "null"
+    var checklocation = "null"
     lateinit var selectedyear: String
     var valueinterior =  ArrayList<String>()
     var valueexterior = ArrayList<String>()
@@ -146,13 +150,18 @@ class HondaFragment: Fragment(), View.OnClickListener {
                                 ReviewActivity::class.java
                             )
                             )
-                    intent.putExtra("selectedyear", selectedyear)
-                    intent.putExtra("selectedmake", "Hunda")
-                    intent.putExtra("selectedmodel", radiobuttonvalue)
-                    intent.putExtra("valueinterior", valueinterior)
-                    intent.putExtra("valueexterior", valueexterior)
-                    intent.putExtra("valueselectedlocation", valueselectedlocation)
-                    startActivity(intent)
+                    if (radiobuttonvalue != "null" && checkinternal != "null" && checkexternal != "null" && checklocation != "null") {
+                        intent.putExtra("selectedyear", selectedyear)
+                        intent.putExtra("selectedmake", "Hunda")
+                        intent.putExtra("selectedmodel", radiobuttonvalue)
+                        intent.putExtra("valueinterior", valueinterior)
+                        intent.putExtra("valueexterior", valueexterior)
+                        intent.putExtra("valueselectedlocation", valueselectedlocation)
+                        startActivity(intent)
+                    }
+                    else {
+                        errorhonda.setText("Error: You must select options from this page, internal page, external page and location page.")
+                    }
                 }
             }
         }
@@ -162,6 +171,7 @@ class HondaFragment: Fragment(), View.OnClickListener {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
+            checkinternal = "nonull"
             val valuecolor = data?.extras?.get("valuecolor").toString()
             Log.d("Creating", valuecolor)
             val valuescreen = data?.extras?.get("valuescreen").toString()
@@ -178,6 +188,7 @@ class HondaFragment: Fragment(), View.OnClickListener {
         }
 
         if (requestCode == 2 && resultCode == Activity.RESULT_OK){
+            checkexternal = "nonull"
             val valuewheel = data?.extras?.get("valuewheel").toString()
             Log.d("Creating", valuewheel)
             val valuebumper = data?.extras?.get("valuebumper").toString()
@@ -190,6 +201,7 @@ class HondaFragment: Fragment(), View.OnClickListener {
         }
 
         if (requestCode == 3 && resultCode == Activity.RESULT_OK){
+            checklocation = "nonull"
             val valuelocation = data?.extras?.get("valuelocation").toString()
             Log.d("Creating", valuelocation)
             valueselectedlocation = valuelocation
