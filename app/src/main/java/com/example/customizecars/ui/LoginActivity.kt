@@ -26,8 +26,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val buttontemp = findViewById<Button>(R.id.buttontemp)
-        buttontemp.setOnClickListener(this)
+
     }
 
     override fun onStart() {
@@ -180,9 +179,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         when (view.getId()){
-            R.id.buttontemp -> {
-                startActivity(Intent(applicationContext, StartScreenActivity::class.java))
-            }
 
         }
     }
