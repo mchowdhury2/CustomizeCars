@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="PlEASE SELECT INERNAL FEATURES"
+        android:text="@string/title_select_internal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
-        android:text="DONE"
+        android:text="@string/button_done"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -33,7 +33,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
-        android:text="Dashboard Color"
+        android:text="@string/radio_button_title_dashboard_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textinternal" />
 
@@ -50,25 +50,25 @@
             android:id="@+id/radioButtonintwhite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="White" />
+            android:text="@string/radio_button_white" />
 
         <RadioButton
             android:id="@+id/radioButtonintblack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Black" />
+            android:text="@string/radio_button_black" />
 
         <RadioButton
             android:id="@+id/radioButtonintgray"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gray" />
+            android:text="@string/radio_button_gray" />
 
         <RadioButton
             android:id="@+id/radioButtonintblue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Blue"
+            android:text="@string/radio_button_blue"
             app:layout_constraintStart_toStartOf="parent" />
     </RadioGroup>
 
@@ -79,7 +79,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
-        android:text="Screen Size"
+        android:text="@string/radio_button_title_screen_size"
         app:layout_constraintStart_toEndOf="@+id/textinteriorcolor"
         app:layout_constraintTop_toBottomOf="@+id/textinternal" />
 
@@ -125,7 +125,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
-        android:text="Sun roof"
+        android:text="@string/radio_button_title_sun_roof"
         app:layout_constraintStart_toEndOf="@+id/textintscreen"
         app:layout_constraintTop_toBottomOf="@+id/textinternal" />
 
@@ -158,7 +158,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
-        android:text="Built-in GPS"
+        android:text="@string/radio_button_title_gps"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroupcolor" />
 
@@ -175,14 +175,14 @@
             android:id="@+id/radioButtongpsyes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Yes"
+            android:text="@string/radio_button_yes"
             app:layout_constraintStart_toStartOf="parent" />
 
         <RadioButton
             android:id="@+id/radioButtongpsno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No" />
+            android:text="@string/radio_button_no" />
     </RadioGroup>
 
     <TextView

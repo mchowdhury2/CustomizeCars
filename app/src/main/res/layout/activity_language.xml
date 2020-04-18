@@ -48,7 +48,7 @@
         android:layout_marginStart="162dp"
         android:layout_marginLeft="162dp"
         android:layout_marginBottom="70dp"
-        android:text="Back"
+        android:text="@string/button_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -59,7 +59,7 @@
         android:layout_marginStart="149dp"
         android:layout_marginLeft="149dp"
         android:layout_marginBottom="50dp"
-        android:text="Choose Language"
+        android:text="@string/title_choose_language"
         app:layout_constraintBottom_toTopOf="@+id/RadioGroupLanguages"
         app:layout_constraintStart_toStartOf="parent" />
 

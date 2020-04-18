@@ -25,7 +25,7 @@
         android:layout_marginStart="42dp"
         android:layout_marginLeft="42dp"
         android:layout_marginBottom="220dp"
-        android:text="Email Address:"
+        android:text="@string/text_email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -36,7 +36,7 @@
         android:layout_marginStart="42dp"
         android:layout_marginLeft="42dp"
         android:layout_marginBottom="55dp"
-        android:text="Postal Address:"
+        android:text="@string/text_postal_address"
         app:layout_constraintBottom_toTopOf="@+id/textEmailTitle"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -47,7 +47,7 @@
         android:layout_marginStart="42dp"
         android:layout_marginLeft="42dp"
         android:layout_marginBottom="55dp"
-        android:text="Phone Number:"
+        android:text="@string/text_phone_number"
         app:layout_constraintBottom_toTopOf="@+id/textPostalAddressTitle"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -58,7 +58,7 @@
         android:layout_marginStart="42dp"
         android:layout_marginLeft="42dp"
         android:layout_marginBottom="55dp"
-        android:text="Name:"
+        android:text="@string/text_name"
         app:layout_constraintBottom_toTopOf="@+id/textPhoneNumberTitle"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -69,7 +69,7 @@
         android:layout_marginStart="42dp"
         android:layout_marginLeft="42dp"
         android:layout_marginBottom="55dp"
-        android:text="Password:"
+        android:text="@string/text_password"
         app:layout_constraintBottom_toTopOf="@+id/textNameTitle"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -80,7 +80,7 @@
         android:layout_marginStart="154dp"
         android:layout_marginLeft="154dp"
         android:layout_marginBottom="34dp"
-        android:text="Edit Information"
+        android:text="@string/title_edit_information"
         app:layout_constraintBottom_toTopOf="@+id/editPassword"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -93,7 +93,7 @@
         android:layout_marginEnd="144dp"
         android:layout_marginRight="144dp"
         android:layout_marginBottom="70dp"
-        android:text="Save and Exit"
+        android:text="@string/button_save_and_exit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -143,7 +143,6 @@
         android:layout_marginBottom="30dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/editPhoneNumber"
         app:layout_constraintEnd_toEndOf="parent" />
 
