@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Autos anpassen</string>
+    <string name="title_activity_login">Einloggen</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Passwort</string>
+    <string name="action_sign_in">Einloggen oder Registrieren</string>
+    <string name="action_sign_in_short">Einloggen</string>
+    <string name="welcome">"Herzlich willkommen !"</string>
+    <string name="invalid_username">Kein gültiger Benutzername</string>
+    <string name="invalid_password">Das passwort muss >5 zeichen lang sein</string>
+    <string name="login_failed">"Anmeldung fehlgeschlagen"</string>
+    <string name="edit_username">Geben Sie den Benutzernamen ein</string>
+    <string name="button_login">Einloggen</string>
+    <string name="button_signup">Anmelden</string>
+    <string name="edit_password">Passwort eingeben</string>
+    <string name="title_activity_maps">Karte</string>
+    <string name="button_new_customization">Neue Anpassung Starten</string>
+    <string name="button_change_language">Sprache ändern</string>
+</resources>

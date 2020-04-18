@@ -14,5 +14,7 @@
     <string name="button_signup">Signup</string>
     <string name="edit_password">Enter password</string>
     <string name="title_activity_maps">Map</string>
+    <string name="button_new_customization">Start New Customization</string>
+    <string name="button_change_language">Change Language</string>
 </resources>
 
