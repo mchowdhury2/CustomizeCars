@@ -20,12 +20,12 @@
     <string name="button_new_customization">Start New Customization</string>
     <string name="button_change_language">Change Language</string>
     <string name="title_select_toyota">PLEASE SELECT A MODEL OF TOYOTA</string>
-    <string name="button_external_features">PLEAE CLICK TO SELECT EXTERNAL FEATURES</string>
+    <string name="button_external_features">PLEASE CLICK TO SELECT EXTERNAL FEATURES</string>
     <string name="button_internal_features">PLEASE CLICK TO SELECT INTERNAL FEATURES</string>
     <string name="button_get_loctation">PLEASE SELECT A LOCATION</string>
     <string name="button_save_and_exit">SAVE AND EXIT</string>
     <string name="button_edit">EDIT</string>
-    <string name="button_submit">SUMBIT</string>
+    <string name="button_submit">SUBMIT</string>
     <string name="button_review_order">REVIEW ORDER</string>
     <string name="title_select_year">PLEASE SELECT A YEAR</string>
     <string name="title_select_make">PLEASE SELECT A MAKE</string>
