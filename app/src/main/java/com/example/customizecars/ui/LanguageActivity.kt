@@ -55,7 +55,7 @@ class LanguageActivity : AppCompatActivity() {
 
     private fun showChangeLang() {
 
-        val listItmes = arrayOf("French (Français)", "Spanish (Español)", "German (Deutsche)", "English")
+        val listItmes = arrayOf("French (Français)", "Spanish (Español)", "German (Deutsche)", "English", "Haitian Creole (Kreyòl Ayisyen)")
 
         val mBuilder = AlertDialog.Builder(this@LanguageActivity)
         mBuilder.setTitle("Choose Language")
@@ -71,6 +71,9 @@ class LanguageActivity : AppCompatActivity() {
                 recreate()
             } else if (which == 3) {
                 setLocate("en")
+                recreate()
+            } else if (which == 4) {
+                setLocate("ht")
                 recreate()
             }
 
