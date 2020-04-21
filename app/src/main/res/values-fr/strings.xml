@@ -19,6 +19,7 @@
     <string name="edit_password">Entrer le mot de passe</string>
     <string name="title_activity_maps">Carte</string>
     <string name="button_new_customization">Lancer une Nouvelle Personnalisation</string>
+    <string name="button_languages">Langages</string>
     <string name="button_change_language">Changer de Langue</string>
     <string name="title_select_toyota">VEUILLEZ CHOISIR UN MODÈLE DE TOYOTA</string>
     <string name="button_external_features">VEUILLEZ CLIQUER POUR SÉLECTIONNER LES CARACTÉRISTIQUES EXTERNES</string>

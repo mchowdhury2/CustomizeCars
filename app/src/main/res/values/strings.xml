@@ -19,6 +19,7 @@
     <string name="title_activity_maps">Map</string>
     <string name="button_new_customization">Start New Customization</string>
     <string name="button_change_language">Change Language</string>
+    <string name="button_languages">Languages</string>
     <string name="title_select_toyota">PLEASE SELECT A MODEL OF TOYOTA</string>
     <string name="button_external_features">PLEASE CLICK TO SELECT EXTERNAL FEATURES</string>
     <string name="button_internal_features">PLEASE CLICK TO SELECT INTERNAL FEATURES</string>
