@@ -1,5 +1,6 @@
 package com.example.customizecars.ui
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -26,6 +27,9 @@ class StartScreenFragment : Fragment(), View.OnClickListener {
         val settings = v.findViewById<ImageButton>(R.id.imageButtonSettings)
         settings.setOnClickListener(this)
 
+        val language = v.findViewById<Button>(R.id.buttonLanguage)
+        language.setOnClickListener(this)
+
 
         return v
     }
@@ -47,9 +51,32 @@ class StartScreenFragment : Fragment(), View.OnClickListener {
                     startActivity(Intent(activity.applicationContext, SettingsEditActivity::class.java))
                 }
 
+                R.id.buttonLanguage -> {
+                    startActivity(Intent(activity.applicationContext, LanguageActivity::class.java))
+                }
+
             }
         }
     }
+
+//    private fun showChangeLanguageDialog() {
+//
+//        val languageOptions = arrayOf("English, Spanish, German")
+//
+//
+//        val dialogBuilder = AlertDialog.Builder(context)
+//        dialogBuilder.setTitle("Choose Language")
+//        dialogBuilder.se
+//
+//        val alert = dialogBuilder.create()
+//        alert.show()
+//
+//
+//        final String[] listItems = {"Spanish", "English", "French"}
+//        AlertDialog.Builder mBuilder = new AlertDialog.Builder{MainAcivity.this}
+//        mBuilder.setTitle("Choose Language")
+//        mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener())
+//    }
 }
 
 

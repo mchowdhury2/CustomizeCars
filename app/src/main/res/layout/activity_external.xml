@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="PLEASE SELECT EXTERNAL FEATURES."
+        android:text="@string/title_select_external"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +23,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
-        android:text="Wheels"
+        android:text="@string/radio_button_title_wheels"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textexternal" />
 
@@ -70,7 +70,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
-        android:text="Bumpers"
+        android:text="@string/radio_button_title_bumper"
         app:layout_constraintStart_toEndOf="@+id/textextwheel"
         app:layout_constraintTop_toBottomOf="@+id/textexternal" />
 
@@ -87,25 +87,25 @@
             android:id="@+id/radioButtonextstd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Standard" />
+            android:text="@string/radio_button_standard" />
 
         <RadioButton
             android:id="@+id/radioButtonextdeep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Deep Drop" />
+            android:text="@string/radio_button_deep_drop" />
 
         <RadioButton
             android:id="@+id/radioButtonexttube"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tube" />
+            android:text="@string/radio_button_tube" />
 
         <RadioButton
             android:id="@+id/radioButtonextstep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Step" />
+            android:text="@string/radio_button_step" />
     </RadioGroup>
 
     <TextView
@@ -115,7 +115,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
-        android:text="Engine"
+        android:text="@string/radio_button_title_engine"
         app:layout_constraintStart_toEndOf="@+id/textextbumpers"
         app:layout_constraintTop_toBottomOf="@+id/textexternal" />
 
@@ -157,7 +157,7 @@
         android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
-        android:text="DONE"
+        android:text="@string/button_done"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

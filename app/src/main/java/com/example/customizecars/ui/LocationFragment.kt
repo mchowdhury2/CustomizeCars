@@ -2,6 +2,7 @@ package com.example.customizecars.ui
 
 import android.app.Activity
 import android.content.Intent
+import android.location.Location
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -73,7 +74,12 @@ class LocationFragment: Fragment(), View.OnClickListener {
         startActivity(mapIntent)
     }
 
+    fun onLocationChanged(loc: Location): Double {
+        val lat: Double = loc.getLatitude()
+        val lng: Double = loc.getLongitude()
 
+        return lat
+    }
 
 
 

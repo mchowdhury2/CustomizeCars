@@ -13,7 +13,7 @@
         android:layout_marginStart="153dp"
         android:layout_marginLeft="153dp"
         android:layout_marginBottom="50dp"
-        android:text="Done"
+        android:text="@string/button_done"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -35,7 +35,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginBottom="50dp"
-        android:text="Email:"
+        android:text="@string/text_email"
         app:layout_constraintBottom_toTopOf="@+id/textPhoneNumber"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -46,7 +46,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginBottom="50dp"
-        android:text="Phone Number:"
+        android:text="@string/text_phone_number"
         app:layout_constraintBottom_toTopOf="@+id/textPostalAddress"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -57,7 +57,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginBottom="180dp"
-        android:text="Postal Address:"
+        android:text="@string/text_postal_address"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -68,7 +68,7 @@
         android:layout_marginStart="181dp"
         android:layout_marginLeft="181dp"
         android:layout_marginBottom="485dp"
-        android:text="Sign Up"
+        android:text="@string/title_signup"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -127,7 +127,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginBottom="50dp"
-        android:text="Password"
+        android:text="@string/text_password"
         app:layout_constraintBottom_toTopOf="@+id/textTitleName"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -138,7 +138,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginBottom="50dp"
-        android:text="User Name:"
+        android:text="@string/text_user_name"
         app:layout_constraintBottom_toTopOf="@+id/textPasswordTitle"
         app:layout_constraintStart_toStartOf="parent" />
 

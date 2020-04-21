@@ -1,11 +1,11 @@
 package com.example.customizecars.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import android.location.Location
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+
 
 class LocationActivity : SingleFragmentActivity() {
 
@@ -20,4 +20,6 @@ class LocationActivity : SingleFragmentActivity() {
         Toast.makeText(applicationContext, "show map", Toast.LENGTH_LONG).show()
         startActivity(intent)
     }
+
+
 }
